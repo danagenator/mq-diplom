@@ -1,0 +1,1036 @@
+/*====COMMON====*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+  font-family: "OpenSans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "OpenSans", sans-serif;
+  margin: 0;
+}
+
+.wrapper {
+  text-align: center;
+  width: 1220px;
+  margin: auto;
+  padding-left: 0 15px;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "OpenSans", sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+input {
+  padding: 10px;
+  font-size: 15px;
+}
+
+input:focus {
+  background-color: #f4f7f6;
+  border: 1px solid #b59f5b;
+  outline: none;
+}
+
+button:hover {
+  background-color: #323232;
+  cursor: pointer;
+}
+
+/*====HEADER====*/
+.header {
+  display: flex;
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000000;
+  z-index: 0;
+  position: relative;
+  align-items: center;
+  padding: 28px 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.header::after {
+  content: "";
+  z-index: -1;
+  opacity: 0.6;
+  position: absolute;
+  background-color: #000000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.header-logo {
+  width: 170px;
+  margin-left: 35px;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__list__item a {
+  color: #ffffff;
+}
+
+.menu__list__item a:hover {
+  text-decoration: underline;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 13px;
+  align-items: center;
+}
+
+.menu__list__item:not(:first-child) {
+  margin-left: 36px;
+}
+
+.header__title {
+  display: flex;
+  color: #ffffff;
+  font-family: "OpenSans Bold", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 700px;
+  margin: 105px auto 103px;
+  line-height: 1.6;
+  justify-content: center;
+}
+
+/*====ARTICLES====*/
+.newsblock {
+  max-width: 776px;
+}
+
+.container {
+  padding-top: 62px;
+  padding-bottom: 15px;
+  display: flex;
+  box-sizing: border-box;
+  max-width: 1172px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.container_content {
+  display: flex;
+}
+
+.container_content:not(:last-child) {
+  margin-bottom: 57px;
+}
+
+.post_img {
+  padding-right: 32px;
+}
+
+.keywords__list__item a {
+  color: #b59f5b;
+}
+
+.list_keywords {
+  display: flex;
+  margin-bottom: 2px;
+  justify-content: left;
+}
+
+.keywords__list__item {
+  display: inline;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-family: "OpenSans Bold", Arial, sans-serif;
+  padding-right: 14px;
+  padding-left: 0px;
+  color: #b59f5b;
+  font-weight: bold;
+}
+
+.keywords__list__item:hover {
+  text-decoration: underline;
+  color: #b59f5b;
+}
+
+.post_header a {
+  color: #0f0d0e;
+}
+
+.post_header a:hover {
+  color: #b59f5b;
+}
+
+.post_header {
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-family: "OpenSans", Arial;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.author {
+  font-family: "OpenSans", Arial;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.post_text>p {
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+}
+
+.post_text>p:not(:first-child) {
+  margin-top: 16px;
+}
+
+.date-author {
+  margin-bottom: 49px;
+  display: flex;
+}
+
+time {
+  color: #888888;
+  font-size: 12px;
+  margin-right: 15px;
+}
+
+/*====LEFT_SIDE====*/
+.sidebar {
+  max-width: 270px;
+  margin-top: -5px;
+}
+
+.aside_title {
+  text-align: center;
+  font-size: 14px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #0f0d0e;
+  font-family: "OpenSans Bold", Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.aside_title::after {
+  content: "";
+  margin: 8px auto 25px auto;
+  background-color: #e1d9bd;
+  width: 65px;
+  height: 3px;
+  display: block;
+}
+
+.aside_post_title a {
+  color: #0f0d0e;
+}
+
+.news>.newpost {
+  margin-bottom: 20px;
+}
+
+.news {
+  margin-bottom: 60px;
+}
+
+.aside_post_title a:hover {
+  color: #b59f5b;
+}
+
+.aside_post_title {
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  vertical-align: top;
+  font-size: 13px;
+  margin: -5px 0 0 20px;
+}
+
+.postdate {
+  vertical-align: top;
+  margin-left: 20px;
+}
+
+.post_image {
+  max-width: 70px;
+  height: 70px;
+}
+
+.newpost {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.form {
+  display: flex;
+  max-width: 270px;
+  margin-top: 60px;
+}
+
+.newsletter {
+  min-width: 100%;
+  margin-bottom: 40px;
+}
+
+::placeholder {
+  padding-left: 15px;
+}
+
+.field {
+  box-sizing: border-box;
+  border: none;
+  max-width: 220px;
+  height: 48px;
+  background-color: #f4f7f6;
+}
+
+.button::before {
+  content: "";
+}
+
+.button {
+  min-width: 48px;
+  height: 48px;
+  background-color: #b59f5b;
+  border: none;
+  background-image: url(https://raw.githubusercontent.com/netology-code/html-2-diploma/49254f5a99cc931a884ff9396cab1b1495830519/sources/images/search.svg);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.newsletter_form {
+  box-sizing: border-box;
+  min-width: 100%;
+  height: 48px;
+  border: none;
+  background-color: #f4f7f6;
+}
+
+.subscribe {
+  display: flex;
+  min-width: 100%;
+  height: 48px;
+  background-color: #b59f5b;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "OpenSans Bold", Arial, sans-serif;
+  margin-top: 18px;
+}
+
+.tags {
+  margin-bottom: 40px;
+}
+
+.taglist {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 270px;
+  margin-top: -10px;
+}
+
+.taglist_item {
+  border: 3px solid #ededed;
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+  padding: 5px 12px;
+  margin-left: 5px;
+  margin-top: 5px;
+  font-family: "OpenSans Bold", Arial, sans-serif;
+}
+
+.taglist_item:hover {
+  background-color: rgba(244, 243, 241, 0);
+  border: 3px solid #b59f5b;
+}
+
+.themeslist {
+  max-width: 100%;
+  margin-top: -15px;
+}
+
+.themeslist_item {
+  display: block;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 14px;
+  line-height: 44px;
+  font-family: "OpenSans", Arial;
+  font-weight: 700;
+}
+
+.themeslist_item:hover {
+  color: #b59f5b;
+}
+
+.amount {
+  vertical-align: super;
+  font-family: "OpenSans", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 36px;
+  color: #b59f5b;
+  margin-left: 3px;
+}
+
+/*====FOOTER====*/
+.footer {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.footer_container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.address {
+  margin-bottom: 75px;
+  background-color: #f4f7f6;
+}
+
+.footer_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 77px;
+}
+
+.social_icon {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+  padding: 30px 30px;
+}
+
+.social_icon_dribbble {
+  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg);
+}
+
+.social_icon_pinterest {
+  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg);
+}
+
+.social_icon_tumblr {
+  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg);
+}
+
+.copyright {
+  text-decoration: none;
+  color: #999999;
+  font-family: "OpenSans Bold", Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+/*======TRENDS======*/
+
+.trends_container {
+  min-height: 315px;
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  flex-shrink: 1;
+}
+
+.section_title {
+  font-size: 20px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #0f0d0e;
+  font-weight: 700;
+  min-height: 110px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.section_title::after {
+  content: "";
+  margin: 9px auto 0 auto;
+  background-color: #e1d9bd;
+  width: 65px;
+  height: 3px;
+  display: block;
+}
+
+.trend_item {
+  position: relative;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.trends_keywords {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trends_keywords_item {
+  font-size: 14px;
+}
+
+.trend_title {
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.trend_text {
+  border: 3px solid #b59f5b;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 35px;
+}
+
+.garden {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+    url(https://github.com/netology-code/mq-diploma/blob/master/sources/img/trend1.jpg?raw=true);
+  background-size: cover;
+}
+
+.cheese {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+    url(https://github.com/netology-code/mq-diploma/blob/master/sources/img/trend2.jpg?raw=true);
+  background-size: cover;
+}
+
+.hiking {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+    url(https://github.com/netology-code/mq-diploma/blob/master/sources/img/trend3.jpg?raw=true);
+  background-size: cover;
+}
+
+.lemons {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+    url(https://github.com/netology-code/mq-diploma/blob/master/sources/img/trend4.jpg?raw=true);
+  background-size: cover;
+}
+
+/*======SHOP======*/
+
+.products {
+  display: flex;
+  max-width: 1167px;
+  align-items: top;
+  gap: 9%;
+  margin: 0 auto;
+  justify-content: center;
+  padding-bottom: 65px;
+}
+
+.product {
+  width: 25%;
+}
+
+.product__img {
+  width: 100%;
+  z-index: 0;
+}
+
+.product__body {
+  border: 3px solid #b59f5b;
+  font-size: 15px;
+  line-height: 22px;
+  color: #0f0d0e;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 20px;
+  margin: -20px;
+  z-index: 2;
+  position: relative;
+  height: 255px;
+}
+
+.product__title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.product__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.product__prices {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0f0d0e;
+  font-weight: 700;
+  margin-right: 10px;
+  align-self: end;
+}
+
+.product__price_old {
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.product__button {
+  background-color: #b59f5b;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  width: 140px;
+  height: 48px;
+}
+
+.product__description {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.section_title_shop {
+  min-height: 90px;
+}
+
+.burger-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+/*======POPUP=====*/
+
+.popup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: #fff;
+  max-width: 400px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.popup_content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 20px;
+}
+
+.select {
+  width: 100%;
+}
+
+.popup_title {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+.popup_title::after {
+  content: "";
+  margin: 8px auto 25px auto;
+  background-color: #e1d9bd;
+  width: 65px;
+  height: 3px;
+  display: block;
+}
+
+.popup_item_text {
+  width: 100%;
+  border: 0;
+  background-color: #f3f7f6;
+  color: #7d7f7e;
+  height: auto;
+  padding-bottom: 100px;
+  padding-top: 20px;
+}
+
+.popup_item_text::placeholder {
+  padding: 20px;
+}
+
+.popup_item_title {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.popup_item {
+  width: 100%;
+}
+
+.select {
+  background-color: #f3f7f6;
+  padding: 10px;
+  padding-left: 20px;
+  border: 0;
+  color: #7d7f7e;
+}
+
+.custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-radio+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.custom-radio+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #b9a163;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 90% 100%;
+}
+
+.custom-radio:checked+label::before {
+  border-color: #b9a163;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23b9a163'/%3e%3c/svg%3e");
+}
+
+.custom-radio+label:hover {
+  cursor: pointer;
+}
+
+.send {
+  align-self: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  background-color: #b9a163;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: large;
+  font-weight: 700;
+}
+
+.esc_btn {
+  cursor: pointer;
+  position: absolute;
+  top: -20px;
+  right: 20px;
+}
+
+.esc_btn:before,
+.esc_btn:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 4px;
+  background: #fff;
+}
+
+.esc_btn:before {
+  transform: rotate(45deg);
+}
+
+.esc_btn:after {
+  transform: rotate(-45deg);
+}
+
+/*======TABLETVERSION=====*/
+
+@media (max-width: 1200px) {
+  .burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .menu__list {
+    display: none;
+  }
+
+  .burger {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+    margin-right: 29px;
+  }
+
+  .burger::before,
+  .burger::after {
+    content: "";
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+
+  .burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 #ffffff;
+    transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+  }
+
+  .burger::after {
+    bottom: 0;
+    transition: bottom 0.3s 0.15s, transform 0.3s;
+  }
+
+  .burger-checkbox:checked+.burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+    transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+  }
+
+  .burger-checkbox:checked+.burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom 0.3s, transform 0.3s 0.15s;
+  }
+
+  .trend_item {
+    width: calc((100% - 5px) / 2);
+    min-height: 245px;
+  }
+
+  .trend_title:hover {
+    color: #b59f5b;
+  }
+
+  .trends_container {
+    flex-wrap: wrap;
+  }
+
+  .container_content {
+    flex-direction: column;
+    margin-right: 30px;
+    max-width: 80%;
+    margin-left: 35px;
+  }
+
+  .post_img {
+    max-width: 100%;
+    padding-bottom: 10px;
+    padding-right: 0;
+  }
+
+  .sidebar {
+    margin-right: 35px;
+  }
+
+  .list_keywords {
+    margin-bottom: 10px;
+  }
+
+  .product {
+    width: 45%;
+    padding-bottom: 50px;
+  }
+
+  .products {
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-bottom: 0;
+  }
+
+  .post_text::after {
+    content: "";
+    margin: 30px auto -10px auto;
+    background-color: #eeeeee;
+    width: 100%;
+    height: 3px;
+    display: block;
+  }
+
+  .date-author {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-logo {
+    width: 80%;
+    position: absolute;
+    margin: auto;
+    top: 30%;
+    left: 10%;
+  }
+
+  .header__title {
+    margin-top: 400px;
+    height: 384px;
+    font-size: 26px;
+  }
+
+  .trend_item {
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    justify-self: center;
+    margin: 0 auto;
+  }
+
+  .container_content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .product {
+    width: 100%;
+  }
+
+  .section_title {
+    font-size: 16px;
+  }
+
+  .trend_title {
+    font-size: 16px;
+  }
+
+  .post_text {
+    font-size: 14px;
+  }
+
+  .post_header {
+    font-size: 16px;
+  }
+
+  .keywords__list__item {
+    font-size: 14px;
+  }
+
+  .sidebar {
+    margin: 0 auto;
+    padding-top: 50px;
+    width: 100%;
+  }
+
+  .post_img {
+    width: 100%;
+    height: 100%;
+    padding-right: 0;
+  }
+
+  .burger {
+    margin-right: 0;
+    left: -10px;
+  }
+
+  .product__title {
+    font-size: 17px;
+  }
+
+  .product__body {
+    font-size: 15px;
+  }
+
+  .popup {
+    width: 90%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) and (orientation:landscape) {
+  .trend_item {
+    width: calc((100% - 5px) / 4);
+    min-height: 245px;
+  }
+
+  .trends_container {
+    flex-wrap: nowrap;
+  }
+
+  .trend_text {
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 640px) and (orientation:landscape) {
+  .trend_item {
+    width: calc((100% - 5px) / 2);
+    min-height: 245px;
+  }
+}
