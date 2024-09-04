@@ -642,6 +642,9 @@ time {
 }
 
 .product__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #b59f5b;
   font-size: 14px;
   font-weight: bold;
@@ -650,6 +653,11 @@ time {
   border: none;
   width: 140px;
   height: 48px;
+}
+
+.product__button:hover {
+  background-color: #323232;
+  color: #ffffff;
 }
 
 .product__description {
@@ -671,8 +679,12 @@ time {
   position: fixed;
   display: flex;
   justify-content: center;
+  align-items: center;
+  top: 0; 
+  left: 0;
   z-index: 2;
   width: 100%;
+  height: 100%;
   background-color:rgba(0, 0, 0, .5);
 }
 
@@ -680,8 +692,6 @@ time {
 .popup {
   background-color: #fff;
   max-width: 400px;
-  margin-top: 150px;
-  margin-bottom: 200px;
   z-index: 3;
 }
 
@@ -713,11 +723,12 @@ time {
 .popup_item_text {
   max-width: 100%;
   min-width: 100%;
+  min-height: 150px;
   border: 0;
   background-color: #f3f7f6;
   color: #7d7f7e;
   height: auto;
-  padding: 20px 20px 100px 20px;
+  padding: 20px;
 }
 
 .popup_item_title {
